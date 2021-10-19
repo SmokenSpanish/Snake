@@ -13,11 +13,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(82, 79, 79, 0.342);
-    
+    border: 1px solid red;
 }
 
 .cell {
     width: 50px;
     height: 50px;
     padding: 5px;
+}
+
+.snake__body {
+    background-image: url(./tekstura-zmeya-kozha-cheshuya-rascvetka.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.snake__head {
+    background-image: url(./ryzhii-kot-kot-morda-lapy-vzgliad.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
 }
