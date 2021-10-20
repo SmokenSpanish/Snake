@@ -35,3 +35,8 @@ body {
     border-radius: 50%;
     background-position: center;
 }
+
+.mouse {
+    background-image: url('./domovaja-mysh-vse-chto-my-o-nej-znaem-animal-reader.-ru-001.jpg');
+    background-size: cover;
+}

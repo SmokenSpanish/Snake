@@ -43,7 +43,27 @@ for (let i = 0; i < snakeBody.length; i++) {
 
 snakeBody[0].classList.add('snake__head')
     
+let mouse;
+
+function createMouse() {
+    function generateMouse() {
+        let posX = Math.round(Math.random() * (10 - 3) + 3);
+        let posY = Math.round(Math.random() * (10 - 1) + 1);
+    return [posX, posY];
+    }
+    let mouseCoordinates = generateMouse();
+    console.log(mouseCoordinates);
+    mouse = document.querySelector('[posX = "' + mouseCoordinates[0] + '"][posY = "' + mouseCoordinates[1] + '"]');
+    
+    while(mouse.classList.contains('snakeBody')) {
+        let mouseCoordinates = generateMouse();
+        mouse = document.querySelector('[posX = "' + mouseCoordinates[0] + '"][posY = "' + mouseCoordinates[1] + '"]');
+    }
+    
+    mouse.classList.add('mouse');
+}
+
+createMouse();
 
 
 
-console.log(snakeBody)
