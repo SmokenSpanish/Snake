@@ -31,6 +31,9 @@ function generateSnake() {
 }
 
 let coordinates = generateSnake();
+console.log(coordinates)
+console.log(coordinates[0])
+console.log(coordinates[1])
 let snakeBody =
     [document.querySelector('[posX = "' + coordinates[0] + '"][posY = "' + coordinates[1] + '"]'), 
     document.querySelector('[posX = "' + (coordinates[0]-1) + '"][posY = "' + coordinates[1] + '"]'), 
@@ -66,4 +69,22 @@ function createMouse() {
 createMouse();
 
 
+function move() {
+    snakeCoordinates = [snakeBody[0].getAttribute('posX'), snakeBody[0].getAttribute('posY')];
+    snakeBody[0].classList.remove('snake__head');
+    snakeBody[snakeBody.length-1].classList.remove('snake__body');
+    snakeBody.pop();
 
+    if (snakeCoordinates[0] < 10) {
+        snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0]+1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
+    } else {
+        snakeBody.unshift(document.querySelector('[posX = "1"][posY = "' + snakeCoordinates[1] + '"]'))
+    }
+    
+    snakeBody[0].classList.add('snake__head');
+    for (let i = 0; i < snakeBody.length; i++) {
+        snakeBody[i].classList.add('snake__body');
+    }
+}
+
+let interval = setInterval(move, 300);

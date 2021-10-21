@@ -13,7 +13,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(82, 79, 79, 0.342);
-    border: 1px solid red;
 }
 
 .cell {
