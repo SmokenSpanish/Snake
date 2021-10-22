@@ -89,16 +89,16 @@ function move() {
             snakeBody.unshift(document.querySelector('[posX = "10"][posY = "' + snakeCoordinates[1] + '"]'))
         }
     } else if (direction == "up") {
-        if (snakeCoordinates[0] < 10) {
+        if (snakeCoordinates[1] < 10) {
             snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1]+1) + '"]'));
          } else {
-            snakeBody.unshift(document.querySelector('[posX = "10"][posY = "1"]'));
+            snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "1"]'));
         }
     } else if (direction == "down") {
-        if (snakeCoordinates[0] > 1) {
+        if (snakeCoordinates[1] > 1) {
             snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (snakeCoordinates[1]-1) + '"]'));
          } else {
-            snakeBody.unshift(document.querySelector('[posX = "10"][posY = "10"]'));
+            snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "10"]'));
         }
     }
 
