@@ -35,6 +35,10 @@ body {
     background-position: center;
 }
 
+.snake__dead {
+    background-image: url(./scream.jpg);
+}
+
 .mouse {
     background-image: url('./domovaja-mysh-vse-chto-my-o-nej-znaem-animal-reader.-ru-001.jpg');
     background-size: cover;
