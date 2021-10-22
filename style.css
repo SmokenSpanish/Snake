@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 100px;
+    
 }
 
 .field {
@@ -12,7 +12,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(82, 79, 79, 0.342);
 }
 
 .cell {
@@ -33,6 +32,10 @@ body {
     background-repeat: no-repeat;
     border-radius: 50%;
     background-position: center;
+}
+
+.snake__dead {
+    background-image: url(./scream.jpg);
 }
 
 .mouse {
